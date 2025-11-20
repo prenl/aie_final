@@ -18,7 +18,7 @@ except Exception:
     YOLO = None
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-POPPLER_PATH = "/opt/homebrew/bin"
+POPPLER_PATH = "/usr/bin"
 
 app = FastAPI(title="Mini PDF/Image inference UI")
 

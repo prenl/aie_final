@@ -20,6 +20,9 @@ RUN python -m pip install --upgrade pip setuptools wheel && \
 # Copy application
 COPY web_app /app
 
+COPY runs /app/runs
+COPY runs /runs
+
 EXPOSE 7860
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s CMD curl -f http://localhost:7860/ || exit 1
