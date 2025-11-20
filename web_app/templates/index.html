@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Inference UI</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; }
+      .preview { display:flex; flex-wrap:wrap; gap:12px; }
+      .preview img { max-width: 320px; border:1px solid #ccc; }
+    </style>
+  </head>
+  <body>
+    <h2>Upload PDF or Image</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".pdf,image/*" required>
+      <button type="submit">Upload & Run</button>
+    </form>
+
+    {% if images %}
+      <h3>Results for: {{ filename }}</h3>
+      <div class="preview">
+        {% for img in images %}
+          <div>
+            <img src="data:image/png;base64,{{ img }}" alt="annotated">
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </body>
+</html>

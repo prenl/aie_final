@@ -1,0 +1,9 @@
+scikit-learn
+pandas
+matplotlib
+ultralytics>=8.0.20
+torch
+numpy
+seaborn
+pillow
+pdftoimage

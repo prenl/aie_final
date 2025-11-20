@@ -1,0 +1,8 @@
+path: /Users/prenl/Desktop/hackathon/dataset_yolo
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: qr
+  1: signature
+  2: stamp
